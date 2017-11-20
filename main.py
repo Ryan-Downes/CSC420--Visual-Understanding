@@ -1,6 +1,7 @@
 from os.path import isfile
 import cv2 as cv
 import numpy as np
+import dataset as ds
 
 def read_image(filename):
     success = False
@@ -29,5 +30,10 @@ def write_image(self, filename, key):
         success = True
     return success, msg
 if __name__ == '__main__':
+
+    dataset = ds.read_dataset()
+    cv.imshow('image',dataset[1])
+    cv.waitKey(0)
+    cv.destroyAllWindows()
 
     exit(1)
