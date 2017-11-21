@@ -1,2 +1,8 @@
 CRCHistoPhenotypes_2016_04_28/
 *.pyc
+lib
+share
+include
+bin
+pip-selfcheck.json
+.Python

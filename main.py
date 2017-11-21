@@ -2,6 +2,7 @@ from os.path import isfile
 import cv2 as cv
 import numpy as np
 import dataset as ds
+import filt
 
 def read_image(filename):
     success = False
@@ -29,11 +30,22 @@ def write_image(self, filename, key):
         cv.imwrite(filename, self._images[key])
         success = True
     return success, msg
+
+"""
+=============================================
+ Main Method
+
+# dataset[0] - img1
+# dataset[1] - img10
+# dataset[2] - img100
+=============================================
+"""
+
 if __name__ == '__main__':
 
+
     dataset = ds.read_dataset()
-    cv.imshow('image',dataset[1])
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+
+    dog = filt.DoG(dataset[0])
 
     exit(1)
