@@ -3,6 +3,7 @@ import cv2 as cv
 import numpy as np
 import dataset as ds
 import filt
+import tf
 
 def read_image(filename):
     success = False
@@ -46,6 +47,6 @@ if __name__ == '__main__':
 
     dataset = ds.read_dataset()
 
-    dog = filt.DoG(dataset[0])
+    
 
     exit(1)
